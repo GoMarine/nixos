@@ -1,0 +1,10 @@
+theme = "noctis"
+
+[editor]
+line-number = "relative"
+mouse = true
+middle-click-paste = true
+
+
+[editor.file-picker]
+hidden = false
