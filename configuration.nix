@@ -3,7 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
+let
+  unstable = import <nixos-unstable> {};
+in
 {
 
   imports =
@@ -109,7 +111,9 @@
   environment.shells = with pkgs; [ zsh ];
 
   environment.variables.EDITOR = "nvim";
-
+  # See https://discourse.nixos.org/t/rust-src-not-found-and-other-misadventures-of-developing-rust-on-nixos/11570/3?u=samuela.
+  environment.variables.RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
+  environment.variables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -149,7 +153,7 @@
     signal-desktop
     lua
     st
-    helix
+    unstable.helix
     zellij
     go
     gotools
@@ -172,7 +176,25 @@
     cl
     zig
     wireshark
+    lf
+    gitui
+    jetbrains.goland
+    jetbrains.idea-community
+    clippy
+    rustc
+    rustup
+    cargo
+    rustfmt
+    rust-analyzer
+    pkgconfig
+    libiconv
+    openssl
+    clang
+    llvmPackages.bintools
+    # libvmi
+    glibc.dev 
     ];
+    
 
   programs.slock.enable = true;
   virtualisation.docker.enable = true;
