@@ -174,7 +174,8 @@ in
     gcc
     clang
     cl
-    zig
+    unstable.zig
+    unstable.zls
     wireshark
     lf
     gitui
@@ -191,9 +192,15 @@ in
     openssl
     clang
     llvmPackages.bintools
-    # libvmi
     glibc.dev 
+    gnumake
+    obsidian
+    ripgrep
+    nodejs-19_x
+    unzip
+    lazygit
     ];
+
     
 
   programs.slock.enable = true;
