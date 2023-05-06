@@ -35,7 +35,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # Example configuration:
 #
 font pango:SourceCodePro Medium 14
-output HDMI-A-1 resolution 3840x2160 position 0,0
+output HDMI-A-1 resolution 3440x1440 position 0,0
 output HDMI-A-1  bg /home/nikola/Pictures/ak.jpg fill
 output DVI-D-2 resolution 1920x1080 position 3440,0 transform 270
 output DVI-D-2 bg /home/nikola/Pictures/cm.jpg fill
