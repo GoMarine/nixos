@@ -9,8 +9,8 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 
-default_border pixel 6
-default_floating_border pixel 6
+default_border pixel 8
+default_floating_border pixel 8
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -30,7 +30,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Example configuration:
 #
-
+font pango:SourceCodePro Medium 14
 output HDMI-A-1 resolution 3840x2160 position 0,0
 output DVI-D-2 resolution 1920x1080 position 3440,0 transform 270
 
@@ -222,5 +222,6 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
+
 
 include /etc/sway/config.d/*
