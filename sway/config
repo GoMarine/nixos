@@ -25,7 +25,8 @@ set $term alacritty #foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu dmenu_path | dmenu  -fn 'SauceCodePro Medium:pixelsize=20' -nb '#1E1E2E' -sf '#1E1E2E' -sb '#89B4FA' -nf '#89B4FA'| xargs swaymsg exec --
+
 
 ### Output configuration
 #
@@ -34,7 +35,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Example configuration:
 #
-font pango:SourceCodePro Medium 14
+# font pango:SourceCodePro Medium 14
 output HDMI-A-1 resolution 3440x1440 position 0,0
 output HDMI-A-1  bg /home/nikola/Pictures/ak.jpg fill
 output DVI-D-2 resolution 1920x1080 position 3440,0 transform 270
@@ -217,16 +218,37 @@ bindsym $mod+c mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-
+    font pango: SauceCodePro Nerd Font 14
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 
+    # default
+    # colors {
+    #     statusline #ffffff
+    #     background #323232
+    #     inactive_workspace #323232 #323232 #5c5c5c
+    # }
+
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #323232 #323232 #5c5c5c
+        background #1E1E2E
+        statusline #F8F8F2
+        separator  #44475A
+
+        focused_workspace  #89B4FA #89B4FA #F8F8F2
+        active_workspace   #1E1E2E #44475A #F8F8F2
+        inactive_workspace #1E1E2E #1E1E2E #BFBFBF
+        urgent_workspace   #F38BA8 #F38BA8 #F8F8F2
+        binding_mode       #F38BA8 #F38BA8 #F8F8F2
     }
 }
 
 include /etc/sway/config.d/*
+
+# class                 border  bground text    indicator child_border
+client.focused          #89B4FA #89B4FA #F8F8F2 #89B4FA   #89B4FA
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #1E1E2E #1E1E2E #BFBFBF #1E1E2E   #1E1E2E
+client.urgent           #44475A #F38BA8 #F8F8F2 #F38BA8   #F38BA8
+client.placeholder      #1E1E2E #1E1E2E #F8F8F2 #1E1E2E   #1E1E2E
+client.background       #F8F8F2
