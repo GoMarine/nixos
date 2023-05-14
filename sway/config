@@ -25,7 +25,7 @@ set $term alacritty #foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu  -fn 'SauceCodePro Medium:pixelsize=20' -nb '#1E1E2E' -sf '#1E1E2E' -sb '#89B4FA' -nf '#89B4FA'| xargs swaymsg exec --
+set $menu dmenu_path | dmenu  -fn 'SauceCodePro Medium:pixelsize=20' -nb '#282828' -sf '#282828' -sb '#d79921' -nf '#d79921'| xargs swaymsg exec --
 
 
 ### Output configuration
@@ -39,7 +39,7 @@ set $menu dmenu_path | dmenu  -fn 'SauceCodePro Medium:pixelsize=20' -nb '#1E1E2
 output HDMI-A-1 resolution 3440x1440 position 0,0
 output HDMI-A-1  bg /home/nikola/Pictures/ak.jpg fill
 output DVI-D-2 resolution 1920x1080 position 3440,0 transform 270
-output DVI-D-2 bg /home/nikola/Pictures/cm.jpg fill
+output DVI-D-2 bg /home/nikola/Pictures/ak.jpg fill
 
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -231,24 +231,24 @@ bar {
     # }
 
     colors {
-        background #1E1E2E
-        statusline #F8F8F2
-        separator  #44475A
+        background #282828
+        statusline #ebdbb2
+        separator  #928374
 
-        focused_workspace  #89B4FA #89B4FA #F8F8F2
-        active_workspace   #1E1E2E #44475A #F8F8F2
-        inactive_workspace #1E1E2E #1E1E2E #BFBFBF
-        urgent_workspace   #F38BA8 #F38BA8 #F8F8F2
-        binding_mode       #F38BA8 #F38BA8 #F8F8F2
+        focused_workspace  #d79921 #d79921 #ebdbb2
+        active_workspace   #282828 #928374 #ebdbb2
+        inactive_workspace #282828 #282828 #BFBFBF
+        urgent_workspace   #fb4934 #fb4934 #ebdbb2
+        binding_mode       #fb4934 #fb4934 #ebdbb2
     }
 }
 
 include /etc/sway/config.d/*
 
 # class                 border  bground text    indicator child_border
-client.focused          #89B4FA #89B4FA #F8F8F2 #89B4FA   #89B4FA
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #1E1E2E #1E1E2E #BFBFBF #1E1E2E   #1E1E2E
-client.urgent           #44475A #F38BA8 #F8F8F2 #F38BA8   #F38BA8
-client.placeholder      #1E1E2E #1E1E2E #F8F8F2 #1E1E2E   #1E1E2E
-client.background       #F8F8F2
+client.focused          #d79921 #d79921 #ebdbb2 #458588   #d79921
+client.focused_inactive #928374 #928374 #ebdbb2 #928374   #928374
+client.unfocused        #282828 #282828 #BFBFBF #282828   #282828
+client.urgent           #928374 #fb4934 #ebdbb2 #fb4934   #fb4934
+client.placeholder      #282828 #282828 #ebdbb2 #282828   #282828
+client.background       #ebdbb2
