@@ -192,7 +192,6 @@ in
     simplescreenrecorder
     ranger
     flameshot
-    signal-desktop
     lua
     st
     unstable.helix
@@ -212,7 +211,7 @@ in
     tldr
     ncdu
     pywal
-    neovim
+    unstable.neovim
     gcc
     clang
     cl
@@ -225,10 +224,11 @@ in
     jetbrains.idea-community
     clippy
     rustc
-    rustup
-    cargo
     rustfmt
+    cargo
+    rustup
     rust-analyzer
+    lldb
     pkgconfig
     libiconv
     openssl
@@ -236,7 +236,6 @@ in
     llvmPackages.bintools
     glibc.dev 
     gnumake
-    obsidian
     ripgrep
     nodejs-19_x
     unzip
@@ -310,6 +309,7 @@ in
     fira-code-symbols
     powerline-fonts
     nerdfonts
+    luajit
   ];
 
 
