@@ -200,12 +200,17 @@ local default_plugins = {
 
   {
     "numToStr/Comment.nvim",
-    keys = { "gcc", "gbc" },
+    keys = {
+      { "gcc", mode = "n" },
+      { "gc", mode = "v" },
+      { "gbc", mode = "n" },
+      { "gb", mode = "v" },
+    },
     init = function()
       require("core.utils").load_mappings "comment"
     end,
-    config = function()
-      require("Comment").setup()
+    config = function(_, opts)
+      require("Comment").setup(opts)
     end,
   },
 
@@ -228,6 +233,7 @@ local default_plugins = {
 
   {
     "nvim-telescope/telescope.nvim",
+    dependencies = "nvim-treesitter/nvim-treesitter",
     cmd = "Telescope",
     init = function()
       require("core.utils").load_mappings "telescope"
