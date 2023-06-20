@@ -6,6 +6,9 @@ local opts = {
     null_ls.builtins.formatting.gofumpt,
     null_ls.builtins.formatting.goimports_reviser, -- go install -v github.com/incu6us/goimports-reviser/v3@latest
     null_ls.builtins.formatting.golines, -- go install github.com/segmentio/golines@latest
+    null_ls.builtins.formatting.black,
+    null_ls.builtins.diagnostics.mypy,
+    null_ls.builtins.diagnostics.ruff,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

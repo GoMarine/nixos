@@ -14,6 +14,11 @@ local plugins = {
       ensure_installed = {
         "rust-analyzer",
         "gopls",
+        "black",
+        "debugpy",
+        "mypy",
+        "ruff",
+        "pyright",
       },
     },
   },
@@ -58,7 +63,7 @@ local plugins = {
 
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = "go",
+    ft = {"go", "python"},
     opts = function()
       return require "custom.configs.null-ls"
     end,
