@@ -114,5 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # To add support for TTYs this line can be optionally added.
 # source ~/.cache/wal/colors-tty.sh
 
+alias ll='exa -l'
+
 export PATH=/home/nikola/.local/bin:$PATH
 export PATH=/home/nikola/go/bin:$PATH
