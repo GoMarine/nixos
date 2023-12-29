@@ -1,4 +1,4 @@
-theme = "catppuccin_mocha"
+theme = "noctis"
 
 [editor]
 line-number = "relative"
@@ -19,8 +19,8 @@ enable=true
 [editor.file-picker]
 hidden = false
 
-# [editor.lsp]
-# display-inlay-hints = true
+[editor.lsp]
+display-inlay-hints = true
 
 [editor.statusline]
 left = ["mode", "spinner", "file-modification-indicator", "file-name", "version-control"]
