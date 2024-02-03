@@ -89,6 +89,10 @@ output DVI-D-2 bg /home/nikola/Pictures/ak.jpg fill
     # bindsym $mod+Shift+q kill
     bindsym $mod+a kill
 
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+
     # Start your launcher
     bindsym $mod+d exec $menu
 
