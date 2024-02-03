@@ -1,0 +1,8 @@
+keybinds {
+    session {
+        bind "Ctrl i" { SwitchToMode "Normal"; }
+    }
+    shared_except "session" "locked" {
+        bind "Ctrl i" { SwitchToMode "Session"; }
+    }
+}
