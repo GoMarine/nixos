@@ -100,10 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ll='exa -la'
+alias ll='eza -la'
 
 export PATH=/home/nikola/.local/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
+# opam configuration
+[[ ! -r /home/nikola/.opam/opam-init/init.zsh ]] || source /home/nikola/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
