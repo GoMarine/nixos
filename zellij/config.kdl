@@ -1,9 +1,11 @@
 theme "catppuccin-mocha" // or latte, frappe and macchiato
 keybinds {
     session {
-        bind "Ctrl i" { SwitchToMode "Normal"; }
+        unbind "Ctrl o"
+        bind "Ctrl l" { SwitchToMode "Normal"; }
     }
     shared_except "session" "locked" {
-        bind "Ctrl i" { SwitchToMode "Session"; }
+        unbind "Ctrl o"
+        bind "Ctrl l" { SwitchToMode "Session"; }
     }
 }
