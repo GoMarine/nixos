@@ -1,3 +1,4 @@
+theme "catppuccin-mocha" // or latte, frappe and macchiato
 keybinds {
     session {
         bind "Ctrl i" { SwitchToMode "Normal"; }
