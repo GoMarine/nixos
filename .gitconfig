@@ -26,4 +26,4 @@
     colorMoved = default
 
 [delta "blame-style"]
-	hyperlinks                    = true
+	hyperlinks = true
