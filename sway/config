@@ -232,7 +232,7 @@ mode "resize" {
 }
 bindsym $mod+Shift+t mode "resize"
 
-    bindsym $mod+s exec --no-startup-id chromium-browser
+    bindsym $mod+s exec --no-startup-id firefox
     bindsym $mod+z exec --no-startup-id thunar
 
 # Include configs from 3 locations:
