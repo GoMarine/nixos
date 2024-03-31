@@ -1,4 +1,4 @@
-theme = "yellowed"
+theme = "default"
 
 [editor]
 line-number = "relative"
@@ -7,6 +7,11 @@ middle-click-paste = true
 rulers = [81]
 shell = ["zsh", "-c"]
 bufferline = "always"
+popup-border = "all"
+cursorline = true
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+completion-timeout = 50
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -38,3 +43,22 @@ C-d = ["half_page_down", "align_view_center"]
 X = ["extend_line_up"]
 F1 = ["goto_previous_buffer"]
 F2 = ["goto_next_buffer"]
+C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+
+# [editor.whitespace]
+# render = "all"
+
+# [editor.whitespace.characters]
+# space = "·"
+# nbsp = "⍽"
+# nnbsp = "␣"
+# tab = "→"
+# # newline =  "⏎"
+# newline = "\\" # Tabs will look like "→···" (depending on tab width)
+# # tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+# tabpad = "." # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
