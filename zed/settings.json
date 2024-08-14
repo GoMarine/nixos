@@ -1,0 +1,29 @@
+{
+  "telemetry": {
+    "metrics": false
+  },
+  "theme": "Catppuccin Mocha - No Italics",
+  "cursor_blink": false,
+  "vim_mode": true,
+  "preferred_line_length": 80,
+  "soft_wrap": "none",
+  "current_line_highlight": "all",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "relative_line_numbers": true,
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "buildFlags": ["-tags=integration,e2e"]
+      }
+    }
+  }
+}
